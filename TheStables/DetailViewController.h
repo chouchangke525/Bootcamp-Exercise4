@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Animal.h"
 
 @interface DetailViewController : UIViewController
+@property (strong, nonatomic) Animal *currentAnimal;
 @property (weak, nonatomic) IBOutlet UIImageView *animalImage;
 @property (weak, nonatomic) IBOutlet UILabel *animalName;
 

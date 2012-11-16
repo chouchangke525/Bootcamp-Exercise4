@@ -7,6 +7,7 @@
 //
 
 #import "StableTableViewController.h"
+#import "DetailViewController.h"
 #import "Animal.h"
 
 @interface StableTableViewController ()
@@ -144,13 +145,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@">>>> Clicked on cell %d", indexPath.row);
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+}
+
+# pragma mark - Segue
+/*******************************************************************************
+ * @method          prepareForSegue:sender
+ * @abstract        Call before the segue
+ * @description     Pass the animal data
+ ******************************************************************************/
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    Animal *selectedReindeer = [self.reindeer objectAtIndex:path.row];
+    [segue.destinationViewController setCurrentAnimal:selectedReindeer];
 }
 
 /*******************************************************************************
