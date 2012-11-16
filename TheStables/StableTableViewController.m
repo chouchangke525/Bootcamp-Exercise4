@@ -74,18 +74,34 @@
 }
 
 #pragma mark - Table view data source
+
+/*******************************************************************************
+ * @method          numberOfSectionsInTableView:
+ * @abstract
+ * @description      
+ ******************************************************************************/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
     return 1 ;
 }
 
+/*******************************************************************************
+ * @method          tableView:numberOfRowsInSection
+ * @abstract
+ * @description      
+ ******************************************************************************/
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
     return [self.reindeer count];
 }
 
+/*******************************************************************************
+ * @method          tableView:cellForRowAtIndexPath:
+ * @abstract
+ * @description      
+ ******************************************************************************/
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"AnimalCell";

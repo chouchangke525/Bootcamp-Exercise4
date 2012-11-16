@@ -27,11 +27,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*******************************************************************************
+ * @method          viewDidAppear:
+ * @abstract        Called when view appears
+ * @description      
+ ******************************************************************************/
 - (void)viewDidAppear:(BOOL)animated
 {
     self.animalName.text = self.currentAnimal.name;
     [self setImage:self.animalImage fromUrl:self.currentAnimal.imageURL];
 }
+
 /*******************************************************************************
  * @method          setImage:fromUrl:
  * @abstract        Async donwload of image data from a passed URL; the image is assigned to the cell that is passed
