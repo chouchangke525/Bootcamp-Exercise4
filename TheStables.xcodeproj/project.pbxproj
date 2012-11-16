@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37BD4EFB1655F85D000DE215 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BD4EFA1655F85D000DE215 /* Animal.m */; };
 		37CC5D1A1655A58400654111 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CC5D191655A58400654111 /* UIKit.framework */; };
 		37CC5D1C1655A58400654111 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CC5D1B1655A58400654111 /* Foundation.framework */; };
 		37CC5D1E1655A58400654111 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CC5D1D1655A58400654111 /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37BD4EF91655F85D000DE215 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		37BD4EFA1655F85D000DE215 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 		37CC5D151655A58400654111 /* TheStables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheStables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37CC5D191655A58400654111 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37CC5D1B1655A58400654111 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +91,8 @@
 				37CC5D281655A58400654111 /* AppDelegate.h */,
 				37CC5D291655A58400654111 /* AppDelegate.m */,
 				37CC5D311655A58400654111 /* MainStoryboard.storyboard */,
+				37BD4EF91655F85D000DE215 /* Animal.h */,
+				37BD4EFA1655F85D000DE215 /* Animal.m */,
 				37CC5D201655A58400654111 /* Supporting Files */,
 			);
 			path = TheStables;
@@ -176,6 +181,7 @@
 				37CC5D261655A58400654111 /* main.m in Sources */,
 				37CC5D2A1655A58400654111 /* AppDelegate.m in Sources */,
 				37CC5D411655A71B00654111 /* StableTableViewController.m in Sources */,
+				37BD4EFB1655F85D000DE215 /* Animal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +298,7 @@
 				37CC5D3B1655A58400654111 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
