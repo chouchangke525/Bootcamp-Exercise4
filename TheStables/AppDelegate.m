@@ -9,10 +9,23 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+/*******************************************************************************
+ * @method      customizeAppearance
+ * @abstract    Customize UI controls
+ * @description
+ *******************************************************************************/
+- (void)customizeAppearance
+{
+    // Set the background image for *all* UINavigationBars
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"snowbar"]
+                                       forBarMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor lightGrayColor]];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self customizeAppearance];
     return YES;
 }
 							

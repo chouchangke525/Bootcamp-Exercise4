@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		37BD4EFB1655F85D000DE215 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BD4EFA1655F85D000DE215 /* Animal.m */; };
 		37BD4EFF16560C89000DE215 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BD4EFE16560C89000DE215 /* DetailViewController.m */; };
+		37BD4F01165615B7000DE215 /* snowflakes.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 37BD4F00165615B7000DE215 /* snowflakes.jpeg */; };
+		37BD4F07165618B0000DE215 /* snowbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BD4F06165618B0000DE215 /* snowbar.png */; };
 		37CC5D1A1655A58400654111 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CC5D191655A58400654111 /* UIKit.framework */; };
 		37CC5D1C1655A58400654111 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CC5D1B1655A58400654111 /* Foundation.framework */; };
 		37CC5D1E1655A58400654111 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CC5D1D1655A58400654111 /* CoreGraphics.framework */; };
@@ -27,6 +29,8 @@
 		37BD4EFA1655F85D000DE215 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 		37BD4EFD16560C89000DE215 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		37BD4EFE16560C89000DE215 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		37BD4F00165615B7000DE215 /* snowflakes.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowflakes.jpeg; sourceTree = "<group>"; };
+		37BD4F06165618B0000DE215 /* snowbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowbar.png; sourceTree = "<group>"; };
 		37CC5D151655A58400654111 /* TheStables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheStables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37CC5D191655A58400654111 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37CC5D1B1655A58400654111 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,6 +110,8 @@
 		37CC5D201655A58400654111 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				37BD4F06165618B0000DE215 /* snowbar.png */,
+				37BD4F00165615B7000DE215 /* snowflakes.jpeg */,
 				37CC5D211655A58400654111 /* TheStables-Info.plist */,
 				37CC5D221655A58400654111 /* InfoPlist.strings */,
 				37CC5D251655A58400654111 /* main.m */,
@@ -173,6 +179,8 @@
 				37CC5D2E1655A58400654111 /* Default@2x.png in Resources */,
 				37CC5D301655A58400654111 /* Default-568h@2x.png in Resources */,
 				37CC5D331655A58400654111 /* MainStoryboard.storyboard in Resources */,
+				37BD4F01165615B7000DE215 /* snowflakes.jpeg in Resources */,
+				37BD4F07165618B0000DE215 /* snowbar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

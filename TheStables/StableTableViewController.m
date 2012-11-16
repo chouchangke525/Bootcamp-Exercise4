@@ -27,10 +27,10 @@
     NSArray *reindeerNames = [NSArray arrayWithObjects:@"Dasher",@"Dancer",@"Prancer",@"Vixen", @"Comet",@"Cupid",@"Donner",@"Blitzen",@"Rudolph",nil];
     NSArray *reindeerURLs = @[
         @"http://farm3.staticflickr.com/2151/2133661509_c54ce96fe5_q.jpg", @"http://farm3.staticflickr.com/2393/2133661737_3feae4ca89_q.jpg",
-        @"http://farm1.staticflickr.com/182/425617969_6cd61245b9_q.jpg", @"http://farm4.staticflickr.com/3042/2789917789_988c62c953_t.jpg",
-        @"http://farm5.staticflickr.com/4138/4882986746_e738e13515_t.jpg", @"http://farm6.staticflickr.com/5246/5218832836_5cce08e1d2_t.jpg",
-        @"http://farm3.staticflickr.com/2166/2158779446_5649063620_t.jpg", @"http://farm9.staticflickr.com/8044/8088504348_307589e545_t.jpg",
-        @"http://mostmetro.com/wp-content/uploads/2011/12/Rudolph-Red-Nosed-Reindeer-007.jpg"];
+        @"http://farm1.staticflickr.com/182/425617969_6cd61245b9_q.jpg", @"http://farm4.staticflickr.com/3042/2789917789_988c62c953_q.jpg",
+        @"http://farm5.staticflickr.com/4138/4882986746_e738e13515_q.jpg", @"http://farm6.staticflickr.com/5246/5218832836_5cce08e1d2_q.jpg",
+        @"http://farm3.staticflickr.com/2166/2158779446_5649063620_q.jpg", @"http://farm9.staticflickr.com/8044/8088504348_307589e545_q.jpg",
+        @"http://farm1.staticflickr.com/18/24149922_1fc1167e86_q.jpg"];
     
     // Initialize the reindeer property
     _reindeer = [NSMutableArray array];
@@ -97,6 +97,8 @@
     Animal *currentAnimal = [self.reindeer objectAtIndex:indexPath.row];
     cell.textLabel.text = currentAnimal.name;
     cell.detailTextLabel.text = currentAnimal.type;    
+    [self setImageForCell:cell fromUrl:currentAnimal.imageURL];
+    
     NSLog(@">>>> Asking for cell:%d for data:%@", indexPath.row,self.reindeer[indexPath.row]);
     return cell;
 }
@@ -165,5 +167,34 @@
  * @abstract        Async donwload of image data from a passed URL; the image is assigned to the cell that is passed
  * @description     WARNING: This is not a safe implementation of async downloading, check out AFNetworking on github for good example
  ******************************************************************************/
+- (void) setImageForCell:(UITableViewCell*)theCell fromUrl:(NSURL*)theUrl
+{
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
+        // Define an image
+        UIImage *downloadImage = nil;
+
+        // Download data from the URL address
+        NSData *responseData = [NSData dataWithContentsOfURL:theUrl];
+        
+        // Convert data to UIImage
+        downloadImage = [UIImage imageWithData:responseData];
+
+        // Check if image exists (download was ok)
+        if (downloadImage) {
+
+            // UI can't be updated from background thread, get back on main thread
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                // Assign the image to the cell properties
+                theCell.imageView.image = downloadImage;
+
+                // Redraw the cell
+                [theCell setNeedsLayout];
+            });
+        } else {
+            NSLog(@"-- impossible download: %@", theUrl);
+        }
+	});
+}
 @end
